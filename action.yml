@@ -1,6 +1,9 @@
 # action.yml
 name: 'Rust Cargo Deb Package Build (amd64, Ubuntu)'
-description: 'Builds a statically linked .deb package, amd64, musl, ubuntu xenial'
+description: 'Builds a statically linked .deb package, amd64, musl, ubuntu'
+branding:
+  icon: 'package'
+  color: 'orange'
 inputs:
   cmd:
     description: 'build command'
