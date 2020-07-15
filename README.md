@@ -29,7 +29,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Deb Build
-      uses: ebbflow-io/cargo-deb-amd64-ubuntu@master
+      uses: ebbflow-io/cargo-deb-amd64-ubuntu@1.0
 ```
 
 A working example can be found in use by Ebbflow to build its client package for various OS and CPU architectures [here](https://github.com/ebbflow-io/ebbflow/blob/master/.github/workflows/continuous-integration.yml).
