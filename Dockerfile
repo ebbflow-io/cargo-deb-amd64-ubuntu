@@ -1,5 +1,4 @@
 FROM clux/muslrust:1.61.0
-LABEL maintainer="jan.starke@t-systems.com"
 
 RUN cargo install cargo-deb; \
     rustup update stable; \
