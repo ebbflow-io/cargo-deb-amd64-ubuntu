@@ -1,5 +1,5 @@
 # action.yml
-name: 'Rust Cargo Deb Package Build (amd64, Ubuntu)'
+name: 'Nova Labs Rust Cargo Deb Package Build (amd64, Ubuntu)'
 description: 'Builds a statically linked .deb package, amd64, musl, ubuntu'
 branding:
   icon: 'package'
