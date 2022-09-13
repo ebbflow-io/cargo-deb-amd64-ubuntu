@@ -1,7 +1,13 @@
 #!/bin/sh -l
-set -eux
+set -xeuo pipefail
 
-VERSION=$(git describe)
+if [ -z "$GITHUB_REF" ]; then
+    git config --global --add safe.directory "$GITHUB_WORKSPACE"
+    VERSION=$(git describe)
+else
+    VERSION="$GITHUB_REF"
+fi
+
 tomato set package.version ${VERSION} Cargo.toml
 
 # Taken from https://github.com/zhxiaogg/cargo-static-build, unsure if all needed or not
