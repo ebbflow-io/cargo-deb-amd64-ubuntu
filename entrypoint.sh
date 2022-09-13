@@ -1,6 +1,9 @@
 #!/bin/sh -l
 set -eux
 
+VERSION=$(git describe)
+tomato set package.version ${VERSION} Cargo.toml
+
 # Taken from https://github.com/zhxiaogg/cargo-static-build, unsure if all needed or not
 
 # hack, move home to $HOME(/github/home)
