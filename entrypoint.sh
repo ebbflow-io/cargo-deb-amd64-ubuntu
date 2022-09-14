@@ -1,5 +1,5 @@
 #!/bin/sh -l
-set -xeuo pipefail
+set -xeu
 
 if [ -z "$GITHUB_REF" ]; then
     git config --global --add safe.directory "$GITHUB_WORKSPACE"
