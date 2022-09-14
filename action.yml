@@ -5,6 +5,9 @@ branding:
   icon: 'package'
   color: 'orange'
 inputs:
+  toml_path:
+    description: 'Relative path to Cargo.toml'
+    required: true
   cmd:
     description: 'build command'
     required: true
