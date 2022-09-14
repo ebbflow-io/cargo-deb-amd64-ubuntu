@@ -5,7 +5,7 @@ if [ -z "$GITHUB_REF" ]; then
     git config --global --add safe.directory "$GITHUB_WORKSPACE"
     VERSION=$(git describe)
 else
-    VERSION=$(echo "$GITHUB_REF" | sed 's;refs/tags/'')
+    VERSION=$(echo "$GITHUB_REF" | sed 's|refs/tags/||')
 fi
 
 tomato set package.version ${VERSION} Cargo.toml
