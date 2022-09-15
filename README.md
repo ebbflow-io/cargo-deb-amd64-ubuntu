@@ -22,7 +22,11 @@ formatted version strings.
 
 ## Inputs
 
-`cmd` - The command to be executed inside the container. Defaults to `cargo deb --target=x86_64-unknown-linux-musl`
+`cmd` - The command to be executed inside the container. Defaults to `cargo deb
+--target=x86_64-unknown-linux-musl`
+
+`toml_path` - the (relative) path to the `Cargo.toml` file to modify with the
+git tag
 
 ## Outputs
 
@@ -41,6 +45,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+
     - name: Deb Build
-      uses: novalabsxyz/cargo-deb-amd64-ubuntu@1.0
+      uses: novalabsxyz/cargo-deb-amd64-ubuntu@2.7
+      with:
+        - toml_path: some/path
 ```
