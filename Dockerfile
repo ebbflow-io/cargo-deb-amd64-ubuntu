@@ -1,4 +1,4 @@
-FROM clux/muslrust:1.61.0
+FROM clux/muslrust:1.66.1
 
 RUN cargo install cargo-deb; \
     rustup update stable; \
